@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Cosas por Hacer</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center my-5">ToDo List</h1>
+        <form id="formulario" class="">
+            <div class="input-group mb-3 row">
+                <div class="col-9">
+                    <input id="tarea" type="text" class="form-control my-1 w-100" placeholder="Ingrese Tarea">
+                    <div id="validacion" class="is-invalid invalid-feedback">
+                        El texto es muy corto
+                    </div>
+                </div>
+                <div class="col-3 needs-validation" novalidate>
+                    <select id="dificultad" class="form-select my-1 text-end" value="">
+                        <option selected disabled value="">Importancia...</option>
+                        <option class="text-success" value="0">Low</option>
+                        <option class="text-warning" value="1">Medium</option>
+                        <option class="text-danger" value="2">High</option>
+                    </select>
+                </div>
+
+            </div>           
+            <div class="row">
+                <i class="col"></i>
+                <div class="col-6 d-grid mx-auto">
+                    <button id="button" class="items-center btn btn-block btn-primary w-100 mx-auto" type="submit">Agregar/Ver Tareas</button>
+                </div>
+                <i class="col"></i>
+            </div>
+        </form>
+        <div class="row">
+            <i class="col"></i>
+            <form id="buttonRealizadas" class="d-grid mx-auto col-6">
+                <button class="items-center btn btn-block btn-success w-100 mx-auto mt-2" type="submit">Ver Tareas Realizadas</button>
+            </form>
+            <div class="form-floating col-3">
+                <select id="ordenar" class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                  <option selected disabled value="">...</option>
+                  <option value="recientes">Recientes Primero</option>
+                  <option value="antiguos">Antiguos Primero</option>
+                  <option value="importantes">Importantes</option>
+                  <option value="noImportantes">Menos Importantes</option>
+                </select>
+                <label id="labelOrdenar" class="mx-2" for="floatingSelect">Ordenar</label>
+              </div>    
+        </div>
+        <div id="lista-tareas" class="mt-3"></div>        
+    </div>
+    <div id="button-up">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <!-- My Js -->
+    <script src="js/main.js"></script>
+</body>
+</html>
